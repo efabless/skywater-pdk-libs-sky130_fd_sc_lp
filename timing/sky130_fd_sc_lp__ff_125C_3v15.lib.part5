@@ -1,3 +1,7 @@
+                    values("0.3167100000, 0.2494200000, 0.2340000000, 0.2152300000, 0.1926000000, 0.1652200000, 0.1322100000, 0.0923800000, 0.0441400000, -0.0146500000, -0.0868100000, -0.1757300000, -0.2858200000, -0.4224400000, -0.5924300000, -0.8041100000, -1.0680000000, -1.3972800000, -1.8082900000, -2.3216500000, -2.9629000000, -3.7641100000, -4.7653600000, -6.0166400000", \
+                        "0.3168900000, 0.2495600000, 0.2341900000, 0.2154300000, 0.1927900000, 0.1653900000, 0.1323700000, 0.0925400000, 0.0443200000, -0.0144700000, -0.0866200000, -0.1755700000, -0.2856600000, -0.4222700000, -0.5922500000, -0.8039300000, -1.0678300000, -1.3970800000, -1.8081100000, -2.3214900000, -2.9627200000, -3.7639300000, -4.7652100000, -6.0164100000", \
+                        "0.3172900000, 0.2499300000, 0.2345900000, 0.2158000000, 0.1931700000, 0.1658100000, 0.1327600000, 0.0929600000, 0.0447300000, -0.0140700000, -0.0862300000, -0.1751600000, -0.2852500000, -0.4218900000, -0.5918600000, -0.8035300000, -1.0674300000, -1.3966800000, -1.8077000000, -2.3210900000, -2.9623000000, -3.7635400000, -4.7647800000, -6.0160700000", \
+                        "0.3174300000, 0.2500800000, 0.2346900000, 0.2159700000, 0.1933200000, 0.1659000000, 0.1329000000, 0.0930800000, 0.0448300000, -0.0139400000, -0.0860800000, -0.1750400000, -0.2851300000, -0.4217300000, -0.5917100000, -0.8034000000, -1.0673000000, -1.3965500000, -1.8075600000, -2.3209300000, -2.9621800000, -3.7634000000, -4.7646500000, -6.0159000000", \
                         "0.3180600000, 0.2507100000, 0.2353600000, 0.2165800000, 0.1939700000, 0.1665500000, 0.1335500000, 0.0937300000, 0.0454500000, -0.0133200000, -0.0854300000, -0.1744100000, -0.2844900000, -0.4210900000, -0.5910800000, -0.8027600000, -1.0666500000, -1.3959100000, -1.8069200000, -2.3203000000, -2.9615300000, -3.7627600000, -4.7640100000, -6.0152900000", \
                         "0.3211700000, 0.2538600000, 0.2384500000, 0.2197400000, 0.1970200000, 0.1696200000, 0.1366700000, 0.0968200000, 0.0486000000, -0.0101800000, -0.0823600000, -0.1712700000, -0.2813600000, -0.4179800000, -0.5879800000, -0.7996500000, -1.0635400000, -1.3928200000, -1.8038400000, -2.3172000000, -2.9584200000, -3.7596600000, -4.7609200000, -6.0121300000", \
                         "0.3275100000, 0.2602000000, 0.2447800000, 0.2260800000, 0.2033900000, 0.1759800000, 0.1429900000, 0.1031400000, 0.0549400000, -0.0038400000, -0.0759900000, -0.1649400000, -0.2750300000, -0.4116300000, -0.5816100000, -0.7932900000, -1.0572100000, -1.3864500000, -1.7974600000, -2.3108400000, -2.9520800000, -3.7533000000, -4.7545700000, -6.0057800000", \
@@ -322,22 +326,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("CLK") {
@@ -775,22 +779,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("CLK") {
@@ -1115,22 +1119,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("CLK") {
@@ -1455,22 +1459,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("CLK") {
@@ -1795,22 +1799,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("CLK") {
@@ -2143,22 +2147,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("D") {
@@ -2681,22 +2685,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("D") {
@@ -3218,22 +3222,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("D") {
@@ -3588,22 +3592,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("ASYNC") {
@@ -4355,22 +4359,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("ASYNC") {
@@ -5126,22 +5130,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("CLK_N") {
@@ -5726,22 +5730,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("CLK") {
@@ -6326,22 +6330,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("CLK") {
@@ -6925,22 +6929,22 @@
         }
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("CLK") {
@@ -7395,22 +7399,22 @@
         dont_use : "true";
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -7913,22 +7917,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -8431,22 +8435,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -8949,22 +8953,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -9467,22 +9471,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -9987,22 +9991,22 @@
         dont_use : "true";
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -10505,22 +10509,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -11709,22 +11713,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -12915,22 +12919,22 @@
         dont_use : "true";
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -13433,22 +13437,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -13951,22 +13955,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -14469,22 +14473,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -14987,22 +14991,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -15507,22 +15511,22 @@
         dont_use : "true";
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -16025,22 +16029,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
@@ -17229,22 +17233,22 @@
         cell_leakage_power : 0.0000000000;
         pg_pin ("VGND") {
             pg_type : "primary_ground";
-            related_bias_pin : "VPB";
+            related_bias_pin : "VNB";
             voltage_name : "VGND";
         }
         pg_pin ("VNB") {
-            pg_type : "nwell";
+            pg_type : "pwell";
             physical_connection : "device_layer";
             voltage_name : "VNB";
         }
         pg_pin ("VPB") {
-            pg_type : "pwell";
+            pg_type : "nwell";
             physical_connection : "device_layer";
             voltage_name : "VPB";
         }
         pg_pin ("VPWR") {
             pg_type : "primary_power";
-            related_bias_pin : "VNB";
+            related_bias_pin : "VPB";
             voltage_name : "VPWR";
         }
         pin ("A") {
