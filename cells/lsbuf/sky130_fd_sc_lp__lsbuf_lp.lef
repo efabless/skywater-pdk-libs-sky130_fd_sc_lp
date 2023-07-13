@@ -73,6 +73,18 @@ MACRO sky130_fd_sc_lp__lsbuf_lp
         RECT 0.000000 3.085000 4.800000 3.575000 ;
     END
   END VGND
+  PIN VNB
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+    END
+  END VNB
+  PIN VPB
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+    END
+  END VPB
   PIN VPB
     DIRECTION INOUT ;
     USE POWER ;

@@ -71,6 +71,18 @@ MACRO sky130_fd_sc_lp__busdriver2_20
         RECT 0.000000 -0.245000 24.960000 0.245000 ;
     END
   END VGND
+  PIN VNB
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+    END
+  END VNB
+  PIN VPB
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+    END
+  END VPB
   PIN VPWR
     DIRECTION INOUT ;
     USE POWER ;
