@@ -23,6 +23,6 @@ specify
 (negedge GATE_N => (Q_N -: D ) ) = (0:0:0,0:0:0); // delays are  tris,tfall
 $width (posedge GATE_N , 0:0:0, 0, notifier);
 $width (negedge GATE_N , 0:0:0, 0, notifier);
-$setuphold ( posedge GATE_N , posedge D , 0:0:0, 0:0:0, notifier , , , GATEN_delayed , D_delayed ) ;
-$setuphold ( posedge GATE_N , negedge D , 0:0:0, 0:0:0, notifier , , , GATEN_delayed , D_delayed ) ;
+$setuphold ( posedge GATE_N , posedge D , 0:0:0, 0:0:0, notifier , , , GATE_N_delayed , D_delayed ) ;
+$setuphold ( posedge GATE_N , negedge D , 0:0:0, 0:0:0, notifier , , , GATE_N_delayed , D_delayed ) ;
 endspecify

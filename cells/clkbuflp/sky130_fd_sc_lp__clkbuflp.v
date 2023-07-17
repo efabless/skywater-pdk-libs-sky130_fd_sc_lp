@@ -35,7 +35,7 @@
 `ifdef FUNCTIONAL
 `include "sky130_fd_sc_lp__clkbuflp.functional.pp.v"
 `else  // FUNCTIONAL
-`include "sky130_fd_sc_lp__clkbuflp.behavioral.pp.v"
+`include "sky130_fd_sc_lp__clkbuflp.timing.pp.v"
 `endif // FUNCTIONAL
 
 `else  // USE_POWER_PINS
@@ -43,7 +43,7 @@
 `ifdef FUNCTIONAL
 `include "sky130_fd_sc_lp__clkbuflp.functional.v"
 `else  // FUNCTIONAL
-`include "sky130_fd_sc_lp__clkbuflp.behavioral.v"
+`include "sky130_fd_sc_lp__clkbuflp.timing.v"
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
