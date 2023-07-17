@@ -21,11 +21,11 @@ if ((!GATE)) (negedge SET_B => (Q -: SET_B ) ) = (0:0:0,0:0:0);  // delay is tfa
 ifnone ( SET_B -=> Q ) = (0:0:0,0:0:0);
 (D +=> Q ) = (0:0:0,0:0:0);  // delays are tris,tfall
 (posedge GATE => (Q +: D ) ) = (0:0:0,0:0:0); // delays are tris,tfall
-$width ( posedge GATE &&& COND1 , 1.0:1.0:1.0, 0, notifier);
-$width ( negedge GATE &&& COND1 , 1.0:1.0:1.0, 0, notifier);
-$recrem ( posedge SET_B , negedge GATE , 0:0:0, 0:0:0, notifier , AWAKE , AWAKE , SETB_delayed , GATE_delayed ) ;
-$setuphold ( negedge GATE , posedge D , 0:0:0, 0:0:0, notifier , COND0 , COND0 , GATE_delayed , D_delayed ) ;
-$setuphold ( negedge GATE , negedge D , 0:0:0, 0:0:0, notifier , COND0 , COND0 , GATE_delayed , D_delayed ) ;
-$width (negedge SET_B &&& AWAKE , 1.0:1.0:1.0 , 0 , notifier);
-$width (posedge SET_B &&& AWAKE , 1.0:1.0:1.0 , 0 , notifier);
+$width ( posedge GATE &&& cond1 , 1.0:1.0:1.0, 0, notifier);
+$width ( negedge GATE &&& cond1 , 1.0:1.0:1.0, 0, notifier);
+$recrem ( posedge SET_B , negedge GATE , 0:0:0, 0:0:0, notifier , awake , awake , SET_B_delayed , GATE_delayed ) ;
+$setuphold ( negedge GATE , posedge D , 0:0:0, 0:0:0, notifier , cond0 , cond0 , GATE_delayed , D_delayed ) ;
+$setuphold ( negedge GATE , negedge D , 0:0:0, 0:0:0, notifier , cond0 , cond0 , GATE_delayed , D_delayed ) ;
+$width (negedge SET_B &&& awake , 1.0:1.0:1.0 , 0 , notifier);
+$width (posedge SET_B &&& awake , 1.0:1.0:1.0 , 0 , notifier);
 endspecify

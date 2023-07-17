@@ -36,7 +36,7 @@
 `ifdef FUNCTIONAL
 `include "sky130_fd_sc_lp__dlybuf4s18kapwr.functional.pp.v"
 `else  // FUNCTIONAL
-`include "sky130_fd_sc_lp__dlybuf4s18kapwr.behavioral.pp.v"
+`include "sky130_fd_sc_lp__dlybuf4s18kapwr.timing.pp.v"
 `endif // FUNCTIONAL
 
 `else  // USE_POWER_PINS
@@ -44,7 +44,7 @@
 `ifdef FUNCTIONAL
 `include "sky130_fd_sc_lp__dlybuf4s18kapwr.functional.v"
 `else  // FUNCTIONAL
-`include "sky130_fd_sc_lp__dlybuf4s18kapwr.behavioral.v"
+`include "sky130_fd_sc_lp__dlybuf4s18kapwr.timing.v"
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS

@@ -36,7 +36,7 @@
 `ifdef FUNCTIONAL
 `include "sky130_fd_sc_lp__busdrivernovlp.functional.pp.v"
 `else  // FUNCTIONAL
-`include "sky130_fd_sc_lp__busdrivernovlp.behavioral.pp.v"
+`include "sky130_fd_sc_lp__busdrivernovlp.timing.pp.v"
 `endif // FUNCTIONAL
 
 `else  // USE_POWER_PINS
@@ -44,7 +44,7 @@
 `ifdef FUNCTIONAL
 `include "sky130_fd_sc_lp__busdrivernovlp.functional.v"
 `else  // FUNCTIONAL
-`include "sky130_fd_sc_lp__busdrivernovlp.behavioral.v"
+`include "sky130_fd_sc_lp__busdrivernovlp.timing.v"
 `endif // FUNCTIONAL
 
 `endif // USE_POWER_PINS
