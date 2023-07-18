@@ -57,6 +57,9 @@ module sky130_fd_sc_lp__lsbuf (
     buf                                buf0        (buf0_out_X, A                        );
     sky130_fd_sc_lp__udp_pwrgood_pp$PG pwrgood_pp0 (X         , buf0_out_X, DESTPWR, VGND);
 
+specify
+(A +=> X) = (0:0:0,0:0:0);
+endspecify
 endmodule
 `endcelldefine
 

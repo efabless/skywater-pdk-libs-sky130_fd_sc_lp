@@ -86,6 +86,21 @@ module sky130_fd_sc_lp__sdfrtp_ov2 (
     assign cond4 = ( ( RESET_B === 1'b1 ) && awake );
     buf                                 buf0      (Q      , buf_Q                                            );
 
+specify
+( negedge RESET_B => ( Q +: RESET_B ) ) = 0:0:0 ;  // delay is tris
+( posedge CLK => ( Q : CLK ) ) = ( 0:0:0 , 0:0:0 ) ; // delays are tris , tfall
+$recrem ( posedge RESET_B , posedge CLK , 0:0:0 , 0:0:0 , notifier , awake , awake , RESET_B_delayed , CLK_delayed ) ;
+$setuphold ( posedge CLK , posedge D , 0:0:0 , 0:0:0 , notifier , cond1 , cond1 , CLK_delayed , D_delayed ) ;
+$setuphold ( posedge CLK , negedge D , 0:0:0 , 0:0:0 , notifier , cond1 , cond1 , CLK_delayed , D_delayed ) ;
+$setuphold ( posedge CLK , posedge SCD , 0:0:0 , 0:0:0 , notifier , cond2 , cond2 , CLK_delayed , SCD_delayed ) ;
+$setuphold ( posedge CLK , negedge SCD , 0:0:0 , 0:0:0 , notifier , cond2 , cond2 , CLK_delayed , SCD_delayed ) ;
+$setuphold ( posedge CLK , posedge SCE , 0:0:0 , 0:0:0 , notifier , cond3 , cond3 , CLK_delayed , SCE_delayed ) ;
+$setuphold ( posedge CLK , negedge SCE , 0:0:0 , 0:0:0 , notifier , cond3 , cond3 , CLK_delayed , SCE_delayed ) ;
+$width ( posedge CLK &&& cond4 , 1.0:1.0:1.0 , 0 , notifier ) ;
+$width ( negedge CLK &&& cond4 , 1.0:1.0:1.0 , 0 , notifier ) ;
+$width ( negedge RESET_B &&& awake , 1.0:1.0:1.0 , 0 , notifier ) ;
+$width ( posedge RESET_B &&& awake , 1.0:1.0:1.0 , 0 , notifier ) ;
+endspecify
 endmodule
 `endcelldefine
 

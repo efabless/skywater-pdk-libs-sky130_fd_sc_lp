@@ -54,6 +54,10 @@ module sky130_fd_sc_lp__iso0p (
     not not0 (sleepn, SLEEP          );
     and and0 (X     , A, sleepn      );
 
+specify
+(A +=> X) = (0:0:0,0:0:0);
+(SLEEP -=> X) = (0:0:0,0:0:0);
+endspecify
 endmodule
 `endcelldefine
 
