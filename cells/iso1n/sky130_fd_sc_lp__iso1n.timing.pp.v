@@ -63,6 +63,10 @@ module sky130_fd_sc_lp__iso1n (
     sky130_fd_sc_lp__udp_pwrgood_pp$PG pwrgood_pp1 (pwrgood_pp1_out_SLEEP, SLEEP, VPWR, KAGND                      );
     or                                 or0         (X                    , pwrgood_pp0_out_A, pwrgood_pp1_out_SLEEP);
 
+specify
+(A +=> X) = (0:0:0,0:0:0);
+(SLEEP_B -=> X) = (0:0:0,0:0:0);
+endspecify
 endmodule
 `endcelldefine
 

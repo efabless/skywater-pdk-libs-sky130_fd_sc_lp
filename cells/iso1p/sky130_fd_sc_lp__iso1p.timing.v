@@ -50,6 +50,10 @@ module sky130_fd_sc_lp__iso1p (
     //  Name  Output  Other arguments
     or  or0  (X     , A, SLEEP       );
 
+specify
+(A +=> X) = (0:0:0,0:0:0);
+(SLEEP +=> X) = (0:0:0,0:0:0);
+endspecify
 endmodule
 `endcelldefine
 

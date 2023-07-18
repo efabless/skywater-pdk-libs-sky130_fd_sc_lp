@@ -64,6 +64,14 @@ module sky130_fd_sc_lp__isolatch (
     sky130_fd_sc_lp__udp_isolatch_pp$PKG$sN isolatch_pp0 (buf_Q , D_delayed, SLEEP_B_delayed, notifier, KAPWR, VGND, VPWR);
     buf                                     buf0         (Q     , buf_Q                                                  );
 
+specify
+(D +=> Q ) = (0:0:0,0:0:0);  // delays are tris,tfall
+(posedge SLEEP_B => (Q +: D ) ) = (0:0:0,0:0:0); // delays are tris,tfall
+$width (posedge SLEEP_B , 0:0:0, 0, notifier);
+$width (negedge SLEEP_B , 0:0:0, 0, notifier);
+$setuphold ( negedge SLEEP_B , posedge D , 0:0:0, 0:0:0, notifier , , , SLEEPB_delayed , D_delayed ) ;
+$setuphold ( negedge SLEEP_B , negedge D , 0:0:0, 0:0:0, notifier , , , SLEEPB_delayed , D_delayed ) ;
+endspecify
 endmodule
 `endcelldefine
 

@@ -52,6 +52,10 @@ module sky130_fd_sc_lp__inputiso0n (
     //  Name  Output  Other arguments
     and and0 (X     , A, SLEEP_B     );
 
+specify
+(A +=> X) = (0:0:0,0:0:0);
+(SLEEP_B +=> X) = (0:0:0,0:0:0);
+endspecify
 endmodule
 `endcelldefine
 
